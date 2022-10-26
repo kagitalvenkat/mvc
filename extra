@@ -1,0 +1,328 @@
+https://code.visualstudio.com/download
+https://github.com/
+https://nodejs.org/en/
+
+Basic JavaScript
+Npm
+React = 3
+Mock API
+json-server
+React-JWT(Login Logout)-2
+React-GarphQL-1
+Depolyment
+-> MERN
+-> Docker
+-> heroku
+-> Nginx
+Github
+React_hooks -1
+Basic React Native=1
+////////////////////////
+React-Redux =1
+React-Redux =1
+Testing Jest Enzime
+React-Saga -1
+React-with-typescript-1
+--------Backend NOT--------------
+API
+GarphQL
+Login/Logout
+
+
+///////////////
+React
+> React is a frontend lib/framework which help
+to build single page application using components
+
+> open source
+> (npm) >> node package manager
+
+
+JSON > JavaScript Object Notation 
+Way to represent the data
+
+[
+    {
+        name:'John',
+        class:'Ui'
+    },
+    {
+        name:'Kevin',
+        class:'React',
+        city:'Amsterdam'
+    }
+]
+
+>>>>>>>>>>>Package.json<<<<<<<<<<<
+> Entry point to application
+> Main file
+    > Meta data
+    > Script (start ,test, build)
+> All Packages
+
+//////////////
+Step To generate package.json
+//////////////
+**NodeJs must be installed in system
+> open terminal/cmd
+> go inside the folder cd 
+> npm init 
+> answer all question
+> type "yes"
+
+//////////////
+Step To install packages
+//////////////
+**NodeJs must be installed in system
+> open terminal/cmd
+> go inside the folder cd 
+> npm i packagename
+
+
+////////////
+Step to generate react app 
+///////////
+#window
+#One time in new system
+> open cmd as admin
+> npm i -g create-react-app
+
+#Next every time you want new app
+> open cmd
+> go inside folder
+> create-react-app appname
+
+#Mac
+#One time in new system
+> open terminal
+> sudo npm i -g create-react-app
+
+#Next every time you want new app
+> open terminal
+> go inside folder
+> create-react-app appname
+
+
+////////////////////
+> open terminal/cmd
+> npx create-react-app appname
+
+
+////////////
+functional
+> Dumb Component 
+> Display Purpose
+> It cannot maintain state
+
+class
+> logical components
+> api call, business logical ,Display
+> It can maintain state
+
+hooks
+
+
+function test(a,b){
+    var out = [a,b]
+    return out
+}
+
+test(3,2)
+2
+function test(a,b){
+    return a,b
+}
+
+test("hi","bie")
+"bie"
+function test(a,b){
+    return a,b
+}
+
+test("bie","hi")
+
+
+
+
+state 
+> state act like a local variable
+> Any data interaction will happen through data
+> state is mutable
+> scope of state will be inside one components
+
+Props
+> help to transfer data between two nested components
+> props are immutable
+
+
+map
+filter
+indexof
+
+var a= [2,3,6,8,9,1,4,7]
+a.map((data) => {return data*2})
+[4, 6, 12, 16, 18, 2, 8, 14]
+
+a.map((data) => {return `<h1>${data*2}</h1>`})
+
+var a= [2,3,6,8,9,1,4,7]
+a.filter((data) => {return data>3})
+[6, 8, 9, 4, 7]
+
+var city = ["Delhi","Newyork","Boston","Amsterdam"]
+city.indexOf('Delhi')
+0
+city.indexOf('Boston')
+2
+city.indexOf('London')
+-1
+city.indexOf('Mumbai')
+-1
+city[0].indexOf('a')
+-1
+city[3].indexOf('a')
+7
+
+parent -> child (props)
+child -> parent (props with function)
+
+function add(a,b){
+    return a+b
+}
+
+add(1,2)
+
+
+npm i react-router-dom
+
+params (/)
+queryparams (?)
+
+params we need to specify in routing and it than become compulsory
+queryparams need not to be defined and not compulsory
+
+history > redirection
+location > queryparams
+match > params
+
+
+withRouter
+
+(get) hotels>         https://developerfunnel.herokuapp.com/hotels
+(get) hotelwrtcity >  https://developerfunnel.herokuapp.com/hotels?city=6
+(get) hoteldetails >  https://developerfunnel.herokuapp.com/hotelsdetails/1
+(get) onbasisoftrip > https://developerfunnel.herokuapp.com/hotellist/1
+
+(get) roomfilter >    https://developerfunnel.herokuapp.com/hotellist/4?roomtype=1
+
+(get) costfilter >    https://developerfunnel.herokuapp.com/hotellist/1?hcost=1000&lcost=500
+(get) cityname >      https://developerfunnel.herokuapp.com/location
+(get) rooms >         https://developerfunnel.herokuapp.com/rooms
+(get) triptype>       https://developerfunnel.herokuapp.com/booking
+(get) bookingdetails> https://developerfunnel.herokuapp.com/allBooking
+(post)placebooking >  https://developerfunnel.herokuapp.com/placeBook
+
+
+npm i abc@4.4
+
+npm i react-router-dom axios react-tabs
+
+
+var a = 10
+var b = "my age is "+a
+"my age is 10"
+
+var c = `my age is ${a}`
+"my age is 10"
+
+
+/////Mock Api///////
+npm i -g json-server
+json-server --watch db.json --port 8900
+
+
+/////////////
+/******GetAllUser*****/
+(GET)> http://localhost:5000/api/auth/users
+
+/******Register*****/
+(POST)> http://localhost:5000/api/auth/register
+(body) => {"name":"Aakash", "email":"aa@gmail.com","password":"12345678","role?":"user"}
+
+
+/******Login*****/
+(POST) => http://localhost:5000/api/auth/login
+(body)  => {"email":"aa@gmail.com","password":"12345678"}
+(response)=> {auth:true,token:'dgsdg'}
+
+/******UserInfo*****/
+(GET) => http://localhost:5000/api/auth/userinfo
+(Header) => {'x-access-token':'token value from login'}
+
+https://docs.github.com/en/developers/apps/authorizing-oauth-apps
+
+{graphQl}
+https://www.youtube.com/c/DeveloperFunnel/videos
+
+////////////
+npm run build
+
+//first time new folder
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/reactmarchprod.git
+git push -u origin master
+
+//next all time
+git add .
+git commit -m "first commit"
+git push
+
+docker build . -t appname
+docker run -p 9800:3000 appname
+
+//step to strat Backend
+> json-server --watch db.json --port 8900
+> npm i 
+> npm start
+> localhost:8600/graphql
+
+{
+  product(id: 2) {
+    name,
+    rating_text
+  }
+}
+
+
+
+npm i apollo-boost apollo-graphql graphql graphql-tag react-apollo
+
+////////
+npm i -g create-react-native-app
+create-react-native-app appname
+cd appname
+npm run web
+
+install in mobile(expo-go)
+https://www.apple.com/in/search/expo-go?src=globalnav
+
+
+state management
+better structure
+fast development
+better testing
+
+View > display
+Action > all api call here
+Reducer >check stat value
+store > save state
+
+npm i react-redux redux redux-logger
+
+npm i react-redux redux react-router-dom redux-logger redux-promise
+npm i enzyme enzyme-adapter-react-16 react-addons-test-utils react-test-renderer
+
+// 14 april
+https://us02web.zoom.us/j/5588867882?pwd=TEtYR2czVUovV2t5ekFPWHZBdlo0Zz09
